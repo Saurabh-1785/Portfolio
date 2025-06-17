@@ -8,6 +8,11 @@
   background-color: white;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+
 .logo_name{
 
   display: flex;
@@ -78,7 +83,6 @@ button:hover{
   transition: 0.3s ease;
   background-color: rgb(182,159,6);
 }
-
 
 
 .main_body{
@@ -196,6 +200,7 @@ h1:hover{
   border-radius: 25px;
   padding: 25px;
   margin-top: 200px;
+  margin-bottom: 50px;
 
 }
 
@@ -281,4 +286,53 @@ h1:hover{
   transform: scale(1.15);
   filter: drop-shadow(0 0 20px rgb(182,159,6,0.6));
   animation: pulse 1s infinite;
+}
+
+.contact-info{
+  margin-top: 100px;
+  border-top: 10px black;
+}
+
+.contact-info h3{
+  font-family: Holtwood One SC, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  padding-left: 100px;
+  margin-bottom: 20px;
+}
+
+.contact-grid{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  background: none;
+}
+
+.contact-grid-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.contact-grid-item1, 
+.contact-grid-item2{
+  background: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+}
+
+.semicircle{
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(circle at center top, 
+  #000000 10%,  
+  #000000 100%);
+  border-radius: 200px 200px 0 0;
+
 }
