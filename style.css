@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: white;
+  
 }
 
 html{
@@ -200,7 +200,7 @@ h1:hover{
   border-radius: 25px;
   padding: 25px;
   margin-top: 200px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 
 }
 
@@ -288,9 +288,17 @@ h1:hover{
   animation: pulse 1s infinite;
 }
 
+hr{
+  height: 4px;
+  border-color: black;
+  border: solid; 
+}
+
 .contact-info{
-  margin-top: 100px;
+  margin-top: 50px;
   border-top: 10px black;
+  position: relative;
+  overflow: visible;
 }
 
 .contact-info h3{
@@ -307,6 +315,7 @@ h1:hover{
   grid-template-rows: auto auto auto;
   gap: 20px;
   background: none;
+
 }
 
 .contact-grid-info{
@@ -317,6 +326,8 @@ h1:hover{
   background: transparent;
   font-size: 26px;
   font-weight: bold;
+ 
+ 
 }
 
 .contact-grid-item1, 
@@ -325,14 +336,30 @@ h1:hover{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 26px;
+  
 }
 
 .semicircle{
-  width: 400px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   height: 200px;
-  background: radial-gradient(circle at center top, 
-  #000000 10%,  
-  #000000 100%);
-  border-radius: 200px 200px 0 0;
+  border-radius: 100% 100% 0 0;
+  background: radial-gradient(ellipse at bottom, rgba(0,0,0,1) , rgba(0,0,0,0));
 
+  opacity: 0.5;
+  z-index: -1;
+  
+}
+
+footer{
+  background-color: black;
+  height: auto;
+  color: white;
+  padding: 5px;
+  padding-left: 15px;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
