@@ -190,7 +190,7 @@ button:hover{
 .console-name2:hover {
   color: rgba(182,159,6,0.6);
   text-shadow: 1px 1px 20px rgba(182,159,6,0.6);
-  transform: translateY(-10px) scale(1.05);
+  
 }
 
 
