@@ -470,7 +470,7 @@ hr{
 }
 
 
-.contact-info h3 a {
+.contact-info h2 a {
   font-family: Holtwood One SC, Arial, Helvetica, sans-serif;
   font-size: clamp(18px, 4vw, 26px);
   padding-left: 20px;
@@ -479,7 +479,7 @@ hr{
  
 }
 
-.contact-info h3 a:hover{
+.contact-info h2 a:hover{
   color: rgba(182,159,6,0.6);
   transform: none;
 }
