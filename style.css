@@ -432,6 +432,66 @@ button:hover{
   color: rgba(182,159,6,0.6);
 }
 
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.hover-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.live-btn {
+  background: #00d4aa;
+  color: white;
+}
+
+.live-btn:hover {
+  background: #00b89a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 212, 170, 0.3);
+}
+
+.source-btn {
+  background: #333;
+  color: white;
+}
+
+.source-btn:hover {
+  background: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Icons */
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
 
 .see-more-card {
   background-image: linear-gradient(#D9D9D9 0%, #737373 100%);
