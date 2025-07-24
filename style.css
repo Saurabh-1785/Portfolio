@@ -12,35 +12,9 @@ html, body{
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /*if my-image stretches beyond width in right side, it will clip it and not allow user to scroll side-way*/
   min-height: 100vh;
   
-}
-
-
-.logo_name{
-
-  display: flex;
-  align-items: center; 
-  gap: 10px; 
-  font-family: Holtwood One SC, Arial, Helvetica, sans-serif;
-  font-size: clamp(10px, 2vw, 25px);
-
-}
-
-.logo_name h3:hover{
-  transition: ease 0.3s;
-  color: rgb(182,159,6);
-  cursor: pointer;
-  transform: translateY(-10px) scale(1.05);
-}
-
-li, a, button {
-  font-family: Abril Fatface, Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
 }
 
 header {
@@ -56,33 +30,43 @@ header {
  
 }
 
+.logo_name{
+  font-family: Holtwood One SC, Arial, Helvetica, sans-serif;
+  font-size: clamp(10px, 2vw, 25px);
+  -webkit-text-stroke: 0.05px rgb(150, 130, 2);
 
-.logo{
-  height: 39px;
-  width: 39px;
+}
+
+.logo_name h3:hover{
+  transition: ease 0.3s;
+  color: rgb(150, 130, 2);
   cursor: pointer;
 }
 
-.nav_links {
+li, a, button {
+  font-family: Abril Fatface, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+
+.nav-links {
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;
-  flex-shrink: 1;
+  flex-wrap: nowrap; /*do not shift items to next lines on decreasing screen size*/
 }
 
 
-.nav_links li{
-  padding: 0px 20px;
+.nav-links li{
+  padding: 0px 20px; /* top-bottom right-left*/
 }
 
-.nav_links li a {
-  transition: all 0.5 s ease 0s;
-}
-
-.nav_links li a:hover ,
-.nav_links li svg{
+.nav-links li a:hover ,
+.nav-links li svg{
   transition: 0.3s ease;
-  color: rgb(182, 159, 6);
+  color: rgb(150, 130, 2);
   cursor: pointer;
   
 }
@@ -100,13 +84,13 @@ header {
   width:70%;
   z-index: 999;
   display: none;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /*applies graphical effects to whatever is behind the element-blur(px),brightness(%),contrast(%),grayscale(%),sepia(%)*/
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: -4px 0 15px rgba(0,0,0,0.2);
+  box-shadow: -4px 0 15px rgba(0,0,0,0.2); /*offset-x offset-y blur-radius spread-radius color*/
   
 }
 
@@ -118,7 +102,6 @@ header {
 
 .sidebar li {
   margin: 15px 0;
-  text-align: center;
 }
 
 .sidebar li a {
@@ -129,17 +112,16 @@ header {
 button {
   padding: 9px 25px;
   background-color: black;
-  border: none;
+  border: 2px solid rgb(150, 130, 2);
   color: white;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
 }
 
 button:hover{
   transition: 0.3s ease;
-  background-color: rgb(182,159,6);
-  transform: translateY(-10px) scale(1.05);
+  background-color: rgb(150, 130, 2);
+  transform: translateY(-5px) scale(1.05); /* negative value move up and scale zoom to 1.05*/
 }
 
 
@@ -148,7 +130,7 @@ button:hover{
   width: 100%;
   max-width: 1440px;
   position: relative;
-  margin: 0 auto 200px auto;
+  margin: 0 auto 200px auto;/*top right bottom left;*/
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -169,27 +151,30 @@ button:hover{
 
 .console-name1 {
   font-family: Nosifer, Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px 30px black;
+  text-shadow: 1px 1px 15px black;
   margin-left: 30px;
   font-size: clamp(45px, 9vw, 111px);
   transition: 0.3s ease;
   cursor: pointer;
+  -webkit-text-stroke: 0.1px rgb(182,159,6, 0.6);
   
 }
 
 .console-name2 {
   font-family: Nosifer, Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px 30px black;
+  text-shadow: 1px 1px 15px black;
   margin-left: clamp(150px, 20vw, 200px);
   font-size: clamp(45px, 9vw, 111px);
   transition: 0.3s ease;
   cursor: pointer;
+  -webkit-text-stroke: 0.1px rgb(182,159,6, 0.6);
 }
 
 .console-name1:hover,
 .console-name2:hover {
-  color: rgba(182,159,6,0.6);
-  text-shadow: 1px 1px 20px rgba(182,159,6,0.6);
+  color: rgb(150, 130, 2, 0.6);
+  text-shadow: 1px 1px 15px rgb(150, 130, 2, 0.6);
+  -webkit-text-stroke: 0.1px black;
   
 }
 
@@ -221,6 +206,7 @@ button:hover{
 
 .about {
   background-color: black;
+  border: 3px solid rgb(150, 130, 2);
   border-radius: 25px;
   padding: 25px 40px;
   margin: 100px auto;
@@ -277,8 +263,8 @@ button:hover{
 
 
 .services h1:hover{
-  transform: translateY(-10px) scale(1.05);
-  color: rgba(182,159,6,0.6);
+  transform: translateY(-5px) scale(1.05);
+  color: rgb(150, 130, 2);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -329,6 +315,7 @@ button:hover{
   transform: scale(1.15);
   filter: drop-shadow(0 0 20px rgb(182,159,6,0.6));
   animation: pulse 1s infinite;
+  transition: all 0.3s ease-out;
   cursor: pointer;
 }
 
@@ -349,11 +336,12 @@ button:hover{
   filter: drop-shadow(0 0 20px rgb(182,159,6,0.6));
   animation: pulse 1s infinite;
   cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
 .project-container {
   background: #ffffff;
-  border: 1px solid;
+  border: 2px solid rgb(150, 130, 2);
   border-radius: 25px;
   padding: 25px 40px;
   margin: 100px auto;
@@ -375,9 +363,9 @@ button:hover{
 }
 
 .project-heading:hover{
-  transform: translateY(-10px) scale(1.05);
+  transform: translateY(-5px) scale(1.05);
   transition: all 0.3s ease-in-out;
-  color: rgba(182,159,6,0.6);
+  color: rgb(150, 130, 2);
   cursor: pointer;
 }
 
@@ -401,7 +389,7 @@ button:hover{
   padding: 30px 20px;
   text-align: center;
   transition: all 0.4s ease;
-  border: 2px solid #e9ecef;
+  border: 1px solid rgb(150, 130, 2);
   height: clamp(144px, 32vw, 296px);
   color: #000;
   text-decoration: none;
@@ -413,7 +401,7 @@ button:hover{
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  border-color: #000000;
+  border-color: rgb(150, 130, 2);;
   backdrop-filter: blur(10px);
   color: #737373;
   cursor: pointer;
@@ -429,69 +417,9 @@ button:hover{
 }
 
 .project-name:hover {
-  color: rgba(182,159,6,0.6);
+  color:rgb(150, 130, 2);
 }
 
-.hover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-.hover-btn {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 120px;
-  justify-content: center;
-}
-
-.live-btn {
-  background: #00d4aa;
-  color: white;
-}
-
-.live-btn:hover {
-  background: #00b89a;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 212, 170, 0.3);
-}
-
-.source-btn {
-  background: #333;
-  color: white;
-}
-
-.source-btn:hover {
-  background: #555;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Icons */
-.btn-icon {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
 
 .see-more-card {
   background-image: linear-gradient(#D9D9D9 0%, #737373 100%);
@@ -537,10 +465,11 @@ hr{
   word-wrap: break-word;
   word-break: break-word;
  
+ 
 }
 
 .contact-info h2 a:hover{
-  color: rgba(182,159,6,0.6);
+  color: rgb(150,130,2);
   transform: none;
 }
 
