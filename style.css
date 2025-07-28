@@ -233,27 +233,34 @@ button:hover{
   box-sizing: border-box;
 }
 
+.about-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
 
-
-.about p{
- 
+.about-paragraph{
+  flex: 1;
   color: rgb(0, 0, 0);
-  font-size: clamp(18px, 5vw, 30px);
+  font-size: clamp(16px, 3vw, 34px); 
   line-height: 2;
   margin: 20px;
   -webkit-text-stroke: 0.5px rgb(150, 130, 2);
 }
 
 .left-image {
-  float: right;
-  width: 35%;
+  flex-shrink: 0;
+  width: 30%;
   max-width: 250px;
   height: auto;
   margin: 10px 0 10px 20px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 50%;
   opacity: 1;
   box-sizing: border-box;
+  border: 1px solid  rgb(182,159,6);
+  box-shadow: 2px 10px 5px rgb(130, 124, 79);
 }
 
 .left-image:hover{
@@ -381,6 +388,7 @@ button:hover{
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  
 }
 
 .project-heading {
@@ -646,9 +654,9 @@ footer p{
 
   .my_image {
     position: absolute;
-    top: 50px;
+    top: 0;
     right: 10px;
-    width: 40%;
+    width: 60%;
     max-width: 400px;
     height: auto;
     opacity: 0.1;
@@ -670,8 +678,17 @@ footer p{
     box-sizing: border-box;
   }
   
+  .about-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* center image horizontally */
+    text-align: center;   /* optional: center the text */
+    gap: 10px;
+  }
+
   .left-image {
-    float: none;
+  
+    height: auto;
     display: block;
     width: 40%;
     max-width: 200px;
@@ -680,7 +697,8 @@ footer p{
     opacity: 1;
   }
 
-  .about p {
+  .about-paragraph {
+  
     text-align: justify;
     margin: 10px 20px;
    
@@ -690,13 +708,24 @@ footer p{
 
   .grid-container1,
   .grid-container2 {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* max 2 per row */
+    gap: 30px;
+    justify-items: center;
+  
+  }
+
+  .grid-container1 > .service-card:nth-last-child(1):nth-child(odd),
+  .grid-container2 > .service-card:nth-last-child(1):nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
   }
 
   .svg-container1 svg,
   .svg-container2 svg {
     max-width: 120px;
+ 
+   
   }
 
   .project-container {
